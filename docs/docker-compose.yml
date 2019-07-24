@@ -7,4 +7,8 @@ sut:
     - web
 web:
   build: .
+- task: Docker@2
+  inputs:
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
   dockerfile: Dockerfile
